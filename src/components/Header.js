@@ -5,7 +5,7 @@ import Toggle from "./Toggle";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <h1>devfinder</h1>
+      <h3>Github Profile Finder</h3>
       <Toggle />
     </header>
   );
