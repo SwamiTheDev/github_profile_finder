@@ -1,0 +1,49 @@
+.toggle {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle label {
+  background: url("../images/icon-sun.svg") no-repeat;
+  filter: invert(0%) sepia(100%) saturate(15%) hue-rotate(237deg)
+    brightness(99%) contrast(104%);
+  cursor: pointer;
+  display: inline-block;
+  transition: all ease-in-out 0.3s;
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.toggle input[type="checkbox"]:checked ~ label {
+  background: url("../images/icon-moon.svg") no-repeat;
+  filter: invert(100%) sepia(56%) saturate(0%) hue-rotate(241deg)
+    brightness(111%) contrast(100%);
+}
+
+.toggle input[type="checkbox"]:checked {
+  background: url("../images/icon-moon.svg") no-repeat;
+  filter: invert(100%) sepia(56%) saturate(0%) hue-rotate(241deg)
+    brightness(111%) contrast(100%);
+}
+
+.toggle input[type="checkbox"]:checked ~ label::after {
+  background-color: #0054b0;
+  transform: translateX(50px);
+}
+
+.toggle p {
+  text-transform: uppercase;
+}
+
+.dark {
+  color: #a5a5a5;
+}
+
+.light {
+  color: #ffffff;
+}

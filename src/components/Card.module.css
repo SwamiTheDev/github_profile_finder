@@ -1,0 +1,142 @@
+.card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "avatar name" "bio bio" "info info" "contact contact";
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--card-color);
+  box-shadow: 0px 10px 37px -18px black;
+  border-radius: 10px;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.avatar {
+  grid-area: avatar;
+  height: 70px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  grid-area: name;
+  color: var(--bio-color);
+}
+
+.name h2 {
+  color: var(--logo-color);
+}
+
+.name h3 {
+  order: 2;
+  color: var(--btn-color);
+}
+
+.name p {
+  order: 3;
+}
+
+.bio {
+  margin: 20px 0px 0px 0px;
+  grid-area: bio;
+  color: var(--bio-color);
+}
+
+.table-header {
+  font-weight: normal;
+}
+
+tr:not(:first-child) th {
+  font-weight: normal;
+}
+
+.profile-info {
+  grid-area: info;
+  text-align: center;
+  column-gap: 10px;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px 0;
+  color: var(--bio-color);
+  background-color: var(--bgc-color);
+}
+
+.profile-info tr > * {
+  width: calc(100% / 3);
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.contact ul li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+}
+
+.contact ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1024px) {
+  .contact ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    padding: 40px;
+    grid-template-columns: 140px 1fr;
+    grid-template-areas: "avatar name" "avatar bio" "avatar info" "avatar contact";
+  }
+
+  .bio {
+    margin: 0px 0px;
+  }
+
+  .name {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "name date" "nick nick";
+    /* align-items: center; */
+  }
+
+  .name h2 {
+    grid-area: name;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 5px;
+  }
+
+  .name h3 {
+    grid-area: nick;
+    order: 3;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  .name p {
+    grid-area: date;
+    order: 2;
+  }
+
+  .avatar {
+    height: 120px;
+  }
+
+  .profile-info {
+    padding: 20px;
+    margin: 32px 0px;
+  }
+}

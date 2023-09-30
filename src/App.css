@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Space Mono", sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3,
+h4 {
+  font-weight: 400;
+}
+
+body {
+  --bgc-color: rgb(20, 29, 47);
+  --card-color: #1e2a47;
+  --stats-color: #ffffff;
+  --logo-color: #ffffff;
+  --stats-color: #697c9a;
+  --bio-color: #ffffff;
+  --btn-color: #0079ff;
+  background-color: var(--bgc-color);
+}
+
+body.light {
+  --bgc-color: #f6f8ff;
+  --card-color: #fefefe;
+  --bio-color: #586e90;
+  --icon-color: #4b6a9b;
+  --stats-color: #bbbbbb;
+  --logo-color: black;
+  --theme-filter: invert(0%) sepia(100%) saturate(15%) hue-rotate(237deg)
+    brightness(99%) contrast(104%);
+  background-color: var(--bgc-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  padding-right: 10px;
+}
+
+.available {
+  color: var(--bio-color);
+}
+
+.not-available {
+  color: var(--stats-color);
+}
